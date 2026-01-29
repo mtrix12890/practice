@@ -5,7 +5,6 @@
 
 html {
     font-size: 100%;
-    font-family: "inter";
 }
 
 *,
@@ -13,6 +12,7 @@ html {
 *::after {
     margin: 0;
     padding: 0;
+    font-family: "inter";
 }
 
 *:not(i) {
@@ -21,71 +21,64 @@ html {
 
 body {
     min-height: 100vh;
-    justify-content: center;
+    background: linear-gradient(90deg, #9AECDB, #FEA47F);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(90deg, #9AECDB, #FEA47F);
-}
-
-.container {
-    background: linear-gradient(90deg, #F8EFBA, #BDC581);
-    margin: 2rem;
-    border-radius: 2rem;
-    box-shadow: 5px 10px 20px #00000067;
     justify-content: center;
 }
 
-.container .item {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 1.5rem;
-    padding: 2rem;
-    border-radius: 1.5rem;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.container .item1,
-.container .item3,
-.container .item5,
-.container .item7,
-.container .item9 {
-    background: linear-gradient(90deg, #FC427B, #FD7272);
-}
-
-.container .item2,
-.container .item4,
-.container .item6,
-.container .item8,
-.container .item10 {
-    background: linear-gradient(90deg, #FD7272, #FC427B);
-}
-
-/* css grid */
-.container {
+.courseslist {
     display: grid;
-    grid-template-columns: 15rem 15rem 15rem 15rem 15rem;
-    grid-template-rows: 15rem 15rem 15rem 15rem;
+    grid-template-columns: repeat(auto-fit, 30rem);
 }
 
-.item1 {
-    grid-column: span 6;
-    grid-row: span 1;
+.courseslist .card {
+    background: linear-gradient(90deg, #74b9ff, #55efc4);
+    border-radius: 2rem;
+    padding: 1rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 10px 20px #2d34365d;
+    align-items: center;
 }
 
-.item2 {
-    grid-column: 5 /6;
-    grid-row: 2/ 4;
+img {
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    margin: 1rem;
+    height: 20%;
+    /* aspect-ratio: .4/.4 !important; */
+    display: flex;
 }
 
-.item3 {
-    grid-column: 1 /5;
-    grid-row: 2/ 4;
+section {
+    background: linear-gradient(135deg, #2d3436, #636e72 70%);
+    border-radius: 2rem;
+    padding: 2rem;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
-.item4 {
-    grid-column: 1 /6;
-    grid-row: 4/ 5;
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+p {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
